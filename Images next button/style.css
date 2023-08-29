@@ -1,0 +1,23 @@
+* {
+  margin: 0.2rem;
+  padding: 0.1rem;
+  box-sizing: border-box;
+  font-family: cursive;
+  font-size: 18px;
+  background: rgba(128, 128, 128, 0.616);
+}
+img {
+  width: 20rem;
+  height: 12.5rem;
+}
+i {
+  color: whitesmoke;
+}
+i:hover {
+  color: gray;
+}
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

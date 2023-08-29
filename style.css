@@ -1,0 +1,14 @@
+* {
+  margin: 0.2rem;
+  padding: 0.1rem;
+  box-sizing: border-box;
+  font-family: cursive;
+  font-size: 18px;
+  background: rgba(128, 128, 128, 0.616);
+}
+.para-style {
+  color: antiquewhite;
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: bolder;
+}
