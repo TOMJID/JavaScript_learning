@@ -1,18 +1,8 @@
-document
-  .querySelectorAll(".myButton")[0]
-  .addEventListener("click", function () {
-    var text = this.innerHTML;
-    document.querySelector("h1").innerHTML = text + "is clicked";
-  });
-document
-  .querySelectorAll(".myButton")[1]
-  .addEventListener("click", function () {
-    var text = this.innerHTML;
-    document.querySelector("h1").innerHTML = text + "is clicked";
-  });
-document
-  .querySelectorAll(".myButton")[2]
-  .addEventListener("click", function () {
-    var text = this.innerHTML;
-    document.querySelector("h1").innerHTML = text + "is clicked";
-  });
+for (var x = 0; x < 3; x++) {
+  document
+    .querySelectorAll(".myButton")
+    [x].addEventListener("click", function () {
+      var text = this.innerHTML;
+      document.querySelector("h1").innerHTML = text + "is clicked";
+    });
+}
