@@ -1,8 +1,18 @@
-var myVar = document.querySelector("h1");
-
-myVar.addEventListener("mouseover", function () {
-  myVar.classList.add("h1-style");
-});
-myVar.addEventListener("mouseout", function () {
-  myVar.classList.remove("h1-style");
-});
+document
+  .querySelectorAll(".myButton")[0]
+  .addEventListener("click", function () {
+    var text = this.innerHTML;
+    document.querySelector("h1").innerHTML = text + "is clicked";
+  });
+document
+  .querySelectorAll(".myButton")[1]
+  .addEventListener("click", function () {
+    var text = this.innerHTML;
+    document.querySelector("h1").innerHTML = text + "is clicked";
+  });
+document
+  .querySelectorAll(".myButton")[2]
+  .addEventListener("click", function () {
+    var text = this.innerHTML;
+    document.querySelector("h1").innerHTML = text + "is clicked";
+  });
