@@ -6,4 +6,5 @@ for (var x = 0; x < lan; x++) {
       var text = this.innerHTML;
       document.querySelector("h1").innerHTML = text + "is clicked";
     });
+  
 }
