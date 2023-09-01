@@ -1,4 +1,5 @@
-for (var x = 0; x < 3; x++) {
+var lan = document.querySelectorAll(".myButton").length;
+for (var x = 0; x < lan; x++) {
   document
     .querySelectorAll(".myButton")
     [x].addEventListener("click", function () {
