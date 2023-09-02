@@ -6,15 +6,24 @@
   font-size: 18px;
   background: rgba(128, 128, 128, 0.616);
 }
-.myButton {
+.buttonDiv{
+ display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.myButton { 
   width: 5rem;
   height: 2.2rem;
-  border: none;
+  border-color: rgba(0, 0, 0, 0.61);
 }
 .myButton:hover {
   border: solid;
-  background-color: rgb(46, 84, 128);
-  color: rgb(41, 197, 176);
+  background-color: rgba(27, 107, 199, 0.623);
+  color: rgba(41, 197, 176, 0.76);
   border-width: 2.5px;
-  border-color: rgb(43, 189, 226);
+  border-color: rgba(43, 189, 226, 0.603);
+}
+.anim {
+  box-shadow: 0 15px 18px 0 tomato;
+  opacity: 0.5;
 }
