@@ -9,6 +9,7 @@ for (var x = 0; x < lan; x++) {
       playAnimation(text);
     });
 }
+//adding sound on click
 function audioPlay(text) {
   switch (text) {
     case "a":
@@ -34,3 +35,9 @@ function playAnimation(text) {
     selectedButton.classList.remove("anim");
   }, 1000);
 }
+//adding Keypress listener
+document.addEventListener("keypress", function (event) {
+  var text = event.key;
+  audioPlay(text);
+  playAnimation(text);
+});
