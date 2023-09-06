@@ -25,7 +25,7 @@ function audioPlay(text) {
       break;
   }
 }
-//adding animation
+//adding  and remove animation
 function playAnimation(text) {
   var selectedButton = document.querySelector("." + text);
   selectedButton.classList.add("anim");
