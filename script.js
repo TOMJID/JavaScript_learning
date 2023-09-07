@@ -1,4 +1,4 @@
-function addStyle() {
-  var myVar = document.querySelector(".paraId");
-  myVar.style.color = "red";
-}
+document.addEventListener("keypress", function (event) {
+  var text = event.key;
+  document.querySelector("p").innerHTML = "You have pressed :" + text;
+});
