@@ -1,4 +1,10 @@
-document.addEventListener("keypress", function (event) {
-  var text = event.key;
-  document.querySelector("p").innerHTML = "You have pressed :" + text;
-});
+var input = document.querySelector("input[name=name]");
+input.addEventListener("change", changeHandler);
+function changeHandler(e) {
+  // console.log(e);
+  // console.log(e.type);
+  // console.log(e.target);
+  // console.log(e.target.className);
+  // console.log(e.target.id);
+  console.log(e.target.value);
+}
