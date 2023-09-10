@@ -12,15 +12,25 @@
 // }
 
 //add litener with chackbox
-const programs = document.querySelectorAll("input[name=program]");
+// const programs = document.querySelectorAll("input[name=program]");
 // console.log(programs);
 
-Array.from(programs).map((program) => {
-  program.addEventListener("change", programHandler);
-});
+// Array.from(programs).map((program) => {
+//   program.addEventListener("change", programHandler);
+// });
 
-function programHandler(e) {
-  if (e.target.checked) {
-    console.log(e.target.value);
-  }
+// function programHandler(e) {
+//   if (e.target.checked) {
+//     console.log(e.target.value);
+//   }
+// }
+
+//add listener with dropdown menu or select
+var depertment = document.querySelector("#depertment");
+// console.log(depertment)
+
+document.addEventListener("change", handleDepertment);
+
+function handleDepertment(e) {
+  console.log(e.target.value);
 }
