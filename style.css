@@ -6,25 +6,6 @@
   font-size: 18px;
   background: rgba(128, 128, 128, 0.616);
 }
-.buttonDiv{
- display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-}
-.myButton { 
-  width: 5rem;
-  height: 2.2rem;
-  border-color: rgba(0, 0, 0, 0.61);
-}
-.myButton:hover {
-  border: solid;
-  background-color: rgba(27, 107, 199, 0.623);
-  color: rgba(41, 197, 176, 0.76);
-  border-width: 2.5px;
-  border-color: rgba(43, 189, 226, 0.603);
-}
-.anim {
-  box-shadow: 4px 9px 16px 5px rgba(0, 0, 0, 0.76);
-  opacity: 0.6;
+div {
+  margin-bottom: 1.5rem;
 }

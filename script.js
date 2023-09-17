@@ -1,37 +1,23 @@
-//for input
+const form = document.querySelector("form");
+const name = form.querySelector("div #name");
+// console.log(Name);
+const email = form.querySelector("div #email");
+// console.log(email);
+const password = form.querySelector("div #password");
+// console.log(password);
 
-// var input = document.querySelector("input[name=name]");
-// input.addEventListener("change", changeHandler);
-// function changeHandler(e) {
-//   // console.log(e);
-//   // console.log(e.type);
-//   // console.log(e.target);
-//   // console.log(e.target.className);
-//   // console.log(e.target.id);
-//   console.log(e.target.value);
-// }
+form.addEventListener("submit", formSubmit);
 
-//add litener with chackbox
-// const programs = document.querySelectorAll("input[name=program]");
-// console.log(programs);
-
-// Array.from(programs).map((program) => {
-//   program.addEventListener("change", programHandler);
-// });
-
-// function programHandler(e) {
-//   if (e.target.checked) {
-//     console.log(e.target.value);
-//   }
-// }
-
-//add listener with dropdown menu or select
-var depertment = document.querySelector("#depertment");
-// console.log(depertment)
-
-document.addEventListener("change", handleDepertment);
-
-function handleDepertment(e) {
-  console.log(e.target.value);
+function formSubmit(e) {
+  e.preventDefault();
+  var userInfo = {
+    name: name.value,
+    email: email.value,
+    password: password.value,
+  };
+  console.log(userInfo);
+  //after submiting at will make the form empty
+  name.value = "";
+  email.value = "";
+  password.value = "";
 }
-
