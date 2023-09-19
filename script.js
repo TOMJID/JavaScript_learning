@@ -1,9 +1,18 @@
-var lan = document.querySelectorAll(".myButton").length;
-for (var x = 0; x < lan; x++) {
-  document
-    .querySelectorAll(".myButton")
-    [x].addEventListener("click", function () {
-      var text = this.innerHTML;
-      document.querySelector("h1").innerHTML = text + "is clicked";
-    });
-}
+//load
+window.addEventListener("load", function () {
+  console.log("load");
+});
+//unload
+window.addEventListener("unload", function () {
+  console.log("unload");
+});
+//scroll
+window.addEventListener("scroll", function () {
+  console.log("scroll");
+});
+//windows resize
+window.addEventListener("resize", function () {
+  const width = window.outerWidth;
+  const height = window.outerHeight;
+  console.log(`height :${height},width:#{width}`);
+});
