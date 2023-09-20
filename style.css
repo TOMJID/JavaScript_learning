@@ -8,9 +8,10 @@
 body{
   background: #4f5b68a6;
 }
-div {
-  background-color: aqua;
-  height: 20rem;
-  width: 20rem;
-  padding: 2rem;
+textarea{
+  border-radius: .5rem;
+  background: #9991afa9;
+  color: #51645f;
+  border: 2px solid #AED8CC;
+  outline: none ;
 }
