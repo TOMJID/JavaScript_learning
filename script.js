@@ -1,32 +1,34 @@
-//keybared Event object
-//1.Keydown - pressing a key, can repeat
-//2.keypress (may not supported by some borwsers)
-//3.keyup
+//focusEvent Object
+//can't use on this element = {<br>,<head>,<title>,<iframe>,<meta>,<param>,<script>,<base>,<bdo>}
 
-//some properties = key,keyCode,code,shiftKey,ctrlKey,prpeat
-
-var textarea = document.querySelector("textarea");
+//1. onblur
+//2. onfocus
+//3. onfocusin
+//4. onfocousout
 
 //1
-textarea.addEventListener("keydown", function (e) {
-  console.log("keydown");
-  if (e.repeat) {
-    alert("do not repeat");
-  }
+var input = document.querySelector("input");
+input.addEventListener("blur", function (e) {
+  // console.log("blur is occured");
+  // input.style.backgroundColor = "transparent";
+  // input.style.padding = "0";
+  // console.log(e.target.value);
+  input.value = e.target.value.toUpperCase();
 });
 
 //2
-// textarea.addEventListener("keypress", function () {
-//   console.log("keypress");
+input.addEventListener("focus", function () {
+  // console.log("focus is occured");
+  // input.style.backgroundColor = "red";
+  // input.style.padding = "2rem";
+});
+
+// //3
+// input.addEventListener("focusin", function () {
+//   console.log("focusin is occured");
 // });
 
-//3
-// textarea.addEventListener("keyup", function (e) {
-//   // console.log(e.key);
-//   // console.log(e.keyCode);
-//   // console.log(e.code);
-//   // console.log(e.shiftKey);
-//   if (e.shiftKey) {
-//     console.log("shift +" + e.key);
-//   }
+// //4
+// input.addEventListener("focusout", function () {
+//   console.log("focusout is occured");
 // });
