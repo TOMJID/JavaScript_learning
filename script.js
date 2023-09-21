@@ -1,34 +1,25 @@
-//focusEvent Object
-//can't use on this element = {<br>,<head>,<title>,<iframe>,<meta>,<param>,<script>,<base>,<bdo>}
+//ClipboardEvent
+//1. oncopy
+//2. oncut
+//3. onpaste
 
-//1. onblur
-//2. onfocus
-//3. onfocusin
-//4. onfocousout
+var input = document.querySelector("input");
+var p = document.querySelector("p");
 
 //1
-var input = document.querySelector("input");
-input.addEventListener("blur", function (e) {
-  // console.log("blur is occured");
-  // input.style.backgroundColor = "transparent";
-  // input.style.padding = "0";
-  // console.log(e.target.value);
-  input.value = e.target.value.toUpperCase();
+input.addEventListener("copy", function () {
+  // console.log("you have copied");
+  p.innerText = "you have copied";
 });
 
 //2
-input.addEventListener("focus", function () {
-  // console.log("focus is occured");
-  // input.style.backgroundColor = "red";
-  // input.style.padding = "2rem";
+input.addEventListener("cut", function () {
+  // console.log("you have cut");
+  p.innerText = "you have cut";
 });
 
-// //3
-// input.addEventListener("focusin", function () {
-//   console.log("focusin is occured");
-// });
-
-// //4
-// input.addEventListener("focusout", function () {
-//   console.log("focusout is occured");
-// });
+//3
+input.addEventListener("paste", function () {
+  // console.log("you have pasted");
+  p.innerText = "you have pasted";
+});
