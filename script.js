@@ -1,25 +1,31 @@
-//ClipboardEvent
-//1. oncopy
-//2. oncut
-//3. onpaste
+//DragEvent Object
+//1.ondragstart
+//2.ondrag
+//3.onragend
+//4.ondragenter
+//5.ondragleave
+//6.ondragover
+//7.ondrop
 
-var input = document.querySelector("input");
 var p = document.querySelector("p");
+var div = document.querySelector(".div1");
 
-//1
-input.addEventListener("copy", function () {
-  // console.log("you have copied");
-  p.innerText = "you have copied";
+
+//to get the drag element
+p.addEventListener("dragstart", function (e) {
+  e.dataTransfer.setData("text", e.target.id);
 });
 
-//2
-input.addEventListener("cut", function () {
-  // console.log("you have cut");
-  p.innerText = "you have cut";
+
+//to save the drag element on the div
+div.addEventListener("drop", function (e) {
+  let id = e.dataTransfer.getData("text");
+  div.appendChild(document.getElementById(id));
+  e.preventDefault();
 });
 
-//3
-input.addEventListener("paste", function () {
-  // console.log("you have pasted");
-  p.innerText = "you have pasted";
+
+//to stop removing the drag element from div
+div.addEventListener("dragover", function (e) {
+  e.preventDefault();
 });

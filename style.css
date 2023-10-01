@@ -5,13 +5,13 @@
   font-family: cursive;
   font-size: 18px;
 }
-body{
+body {
   background: #4f5b68a6;
 }
-textarea{
-  border-radius: .5rem;
-  background: #9991afa9;
-  color: #51645f;
-  border: 2px solid #AED8CC;
-  outline: none ;
+div {
+  width: 50%;
+  height: 200px;
+  border-radius: 0.5rem;
+  background: #4ba2a8a2;
+  margin: auto;
 }
