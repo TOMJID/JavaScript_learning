@@ -1,31 +1,24 @@
-//DragEvent Object
-//1.ondragstart
-//2.ondrag
-//3.onragend
-//4.ondragenter
-//5.ondragleave
-//6.ondragover
-//7.ondrop
+//BOM {Browser Object Model}
+//1.window object
+//2.location object
 
-var p = document.querySelector("p");
-var div = document.querySelector(".div1");
+console.clear();
 
+//1.
+// console.log(window);
+// console.log(window.location); & console.log(locotion)  are SAME
 
-//to get the drag element
-p.addEventListener("dragstart", function (e) {
-  e.dataTransfer.setData("text", e.target.id);
-});
+//hraf
+console.log(location.href);
 
+//protocol
+console.log(location.protocol);
 
-//to save the drag element on the div
-div.addEventListener("drop", function (e) {
-  let id = e.dataTransfer.getData("text");
-  div.appendChild(document.getElementById(id));
-  e.preventDefault();
-});
+//hostname
+console.log(location.hostname);
 
+//port
+console.log(location.port);
 
-//to stop removing the drag element from div
-div.addEventListener("dragover", function (e) {
-  e.preventDefault();
-});
+//pathname
+console.log(location.pathname);
