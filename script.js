@@ -4,21 +4,28 @@
 
 console.clear();
 
-//1.
-// console.log(window);
-// console.log(window.location); & console.log(locotion)  are SAME
+var locationDiv = document.querySelector(".location-div");
+console.log(locationDiv);
 
-//hraf
-console.log(location.href);
+var p1 = locationDiv.children[0];
+p1.textContent = location.href;
 
-//protocol
-console.log(location.protocol);
+var p2 = locationDiv.children[1];
+p2.textContent = location.hostname;
 
-//hostname
-console.log(location.hostname);
+var p3 = locationDiv.children[2];
+p3.textContent = location.protocol;
 
-//port
-console.log(location.port);
+var p4 = locationDiv.children[3];
+p4.textContent = location.port;
 
-//pathname
-console.log(location.pathname);
+var p5 = locationDiv.children[4];
+p5.textContent = location.pathname;
+
+
+
+
+var button = document.querySelector("#visit-button");
+button.addEventListener("click", function () {
+  location.assign("https://www.google.com");
+});
