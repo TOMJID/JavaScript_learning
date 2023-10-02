@@ -1,32 +1,44 @@
 //JS BOM
-//POPUP BOXES - alert , confirm , prompt
+//JS Timing event methods
+//1.setTimeOut()
+//2.setInterval()
 
-// alert("error here")
+//1.
 
-// confirm("are you sure")
+// setTimeout(() => {
+//   console.log("hi");
+// }, 2000);
 
-// function deleteSomething() {
-//   let value = confirm("Do you want to delete this ?");
-//   if (value) {
-//     console.log("deleted");
-//   } else {
-//     console.log("not deleted");
-//   }
+// setTimeout(display, 2000);
+// function display() {
+//   console.log("display function");
 // }
-// deleteSomething()
 
-function welcomeMassage() {
-  var welcome = document.createElement("h2");
-  var text;
-  var userName = prompt("enter your name");
+var save = document.querySelector(".save-button");
+var massage = document.querySelector(".massage");
 
-  if (userName == null || userName == "") {
-    text = "no name found";
-  } else {
-    text = userName;
-  }
-  var textNode = document.createTextNode(text);
-  welcome.appendChild(textNode);
-  document.body.appendChild(welcome);
+save.addEventListener("click", saveUser);
+
+function saveUser() {
+  massage.textContent = "user details saved";
+
+  setTimeout(() => {
+    massage.textContent = "";
+  }, 1500);
 }
-welcomeMassage();
+
+//2
+var save1 = document.querySelector(".save-button-1");
+var massage1 = document.querySelector(".massage-1");
+
+save1.addEventListener("click", displayCount);
+
+function displayCount() {
+  let count = 0;
+  massage1.textContent = count;
+
+  setInterval(() => {
+    count++;
+    massage1.textContent = count;
+  }, 1000);
+}
