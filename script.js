@@ -1,44 +1,25 @@
-//JS BOM
-//JS Timing event methods
-//1.setTimeOut()
-//2.setInterval()
+var saveBtn = document.querySelector(".save-button");
+var message = document.querySelector(".messages");
 
-//1.
+saveBtn.addEventListener("click", startClock);
 
-// setTimeout(() => {
-//   console.log("hi");
-// }, 2000);
+function startClock() {
+  var date = new Date();
 
-// setTimeout(display, 2000);
-// function display() {
-//   console.log("display function");
-// }
+  let seconds = date.getSeconds();
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
 
-var save = document.querySelector(".save-button");
-var massage = document.querySelector(".massage");
-
-save.addEventListener("click", saveUser);
-
-function saveUser() {
-  massage.textContent = "user details saved";
-
-  setTimeout(() => {
-    massage.textContent = "";
-  }, 1500);
+  seconds = formetTime(seconds);
+  minutes = formetTime(minutes);
+  var time = hours + ":" + minutes + ":" + seconds;
+  message.textContent = time;
+  setInterval(startClock, 1000);
 }
 
-//2
-var save1 = document.querySelector(".save-button-1");
-var massage1 = document.querySelector(".massage-1");
-
-save1.addEventListener("click", displayCount);
-
-function displayCount() {
-  let count = 0;
-  massage1.textContent = count;
-
-  setInterval(() => {
-    count++;
-    massage1.textContent = count;
-  }, 1000);
+function formetTime(value) {
+  if (value < 10) {
+    value = "0" + value;
+  }
+  return value;
 }
