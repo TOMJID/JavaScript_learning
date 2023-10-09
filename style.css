@@ -1,11 +1,10 @@
 * {
-  margin: 0.2rem;
-  padding: 0.1rem;
-  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
   font-family: cursive;
   font-size: 18px;
 }
 body {
-  background: rgb(0, 0, 0);
+  background: rgb(97, 89, 124);
   color: white;
 }
