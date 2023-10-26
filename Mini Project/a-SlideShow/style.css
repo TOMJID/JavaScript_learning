@@ -1,0 +1,25 @@
+body {
+  overflow: hidden;
+}
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(24, 224, 224, 0.753);
+}
+
+.slideshow-element {
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 1s;
+}
+.slideshow-element i,
+h2 {
+  font-size: 8rem;
+  color: rgba(70, 131, 180, 0.445);
+}
+.current {
+  transform: translate(-50%, -50%) scale(1);
+}

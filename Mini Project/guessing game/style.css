@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: aquamarine;
+}
+.card {
+  width: 32rem;
+  height: 20rem;
+  color: #d44286;
+  font-size: 1.2rem;
+  background-color: beige;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem #22222273, -0.1rem 0.1rem #22222273;
+  transition: all 0.4s;
+}
+.card:hover {
+  box-shadow: 0.3rem 0.7rem 0.7rem #22222273;
+}
+.card-tittle {
+  text-align: center;
+}
+.ford-field {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.ford-field input {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  border: none;
+  border: 0.1rem solid;
+  outline: none;
+  border-radius: 4px;
+  padding-left: 2px;
+  background-color: #eee;
+  color: #222;
+  cursor: pointer;
+  width: 60%;
+}
+.btn {
+  padding: 3px 1.5rem;
+  font-size: 0.9rem;
+  background-color: #eee;
+  border: none;
+  border: 0.1rem solid;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #ccc;
+  box-shadow: 0 0.2rem 0.2rem #22222252;
+}
+.result-text,
+.remaining-attempts {
+  text-align: center;
+}
+.result-text {
+  margin-top: 1rem;
+}
+.large-text {
+  font-size: 1.5rem;
+  color: #222;
+}
