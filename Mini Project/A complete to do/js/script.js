@@ -1,7 +1,7 @@
-const container = document.querySelector(".container");
+import { Todo } from "./todo.js";
+
 const todoForm = document.querySelector(".todo-form");
 const todoInput = document.querySelector("#inputTodo");
-const todoAddBtn = document.querySelector("#addTodoBtn");
 const todoLists = document.getElementById("lists");
 const massageElement = document.getElementById("massage");
 
@@ -16,11 +16,11 @@ const showMassage = (text, status) => {
 };
 
 //create todo
-const createTodo = (todoId, todoValue) => {
+const createTodo = (newTodo) => {
   const todoElement = document.createElement("li");
-  todoElement.id = todoId;
+  todoElement.id = newTodo.todoId;
   todoElement.classList.add("list-style");
-  todoElement.innerHTML = `<span>${todoValue}</span>
+  todoElement.innerHTML = `<span>${newTodo.todoValue}</span>
   <span><button class="btn" id="deleteBtn"><i class="fa-solid fa-trash"></i></button></span>`;
   todoLists.appendChild(todoElement);
   const deleteBtn = todoElement.querySelector("#deleteBtn");
@@ -50,13 +50,14 @@ const addTodo = (event) => {
 
   //unique id
   const todoId = Date.now().toString();
-  createTodo(todoId, todoValue);
+  const newTodo = new Todo(todoId, todoValue);
+  createTodo(newTodo);
   showMassage("Task have been added", "success");
 
   //adding toto to locatStroage
 
   const todos = getTodosFromLocalStroage();
-  todos.push({ todoId, todoValue });
+  todos.push(newTodo);
   localStorage.setItem("mytodos", JSON.stringify(todos));
   todoInput.value = "";
 };
@@ -64,7 +65,7 @@ const addTodo = (event) => {
 //load todos
 const loadTodos = () => {
   const todos = getTodosFromLocalStroage();
-  todos.map((todo) => createTodo(todo.todoId, todo.todoValue));
+  todos.map((todo) => createTodo(todo));
 };
 
 //adding listeners
