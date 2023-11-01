@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  color-scheme: dark light;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Fira Code", monospace;
+}
+.container {
+  background: #4e4c4c;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background: #444;
+  overflow: auto;
+  padding: 2rem;
+  color: #fff;
+  min-height: 70vh;
+  width: 60%;
+  height: 50%;
+
+  border-radius: 1rem;
+}
+.card .card-tittle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+form {
+  display: flex;
+  justify-content: space-evenly;
+}
+form input {
+  width: 75%;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+form .btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+form .btn:hover {
+  background: #4e4c4c;
+  color: #ffffff8c;
+}
+.list-style {
+  background: #4e4e4e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: 8px;
+  margin: 0.6rem 0.5rem;
+  transition: all 0.3s ease;
+}
+.list-style:hover {
+  color: #ffffff8c;
+  background: #2232;
+}
+.list-style .btn {
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  transition: all 0.3s;
+}
+.list-style .btn:hover {
+  background: #c0e2b1;
+  color: #0000008c;
+}
+.success-massage {
+  background: hwb(162 22% 43% / 0.26);
+  margin: 0.5rem 0.4rem;
+  padding: 0.4rem;
+  color: #ab7cad;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+}
+.delete-massage {
+  background: hwb(0 0% 0% / 0.26);
+  margin: 0.5rem 0.4rem;
+  padding: 0.4rem;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+}
